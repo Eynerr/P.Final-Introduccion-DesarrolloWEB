@@ -1,0 +1,618 @@
+/* RAIZ MODULAR*/
+
+:root {
+  --color-letra: white;
+  --color-fondo: #177ec7;
+  --color-fondocontainer: rgb(5, 75, 116);
+  --letra-poppins: "Poppins", sans-serif;
+  --fondo-conmaster: #cdcdcd;
+}
+
+* {
+  margin: 0cm;
+  padding: 0cm;
+  box-sizing: border-box;
+}
+
+/* *******BODY******** */
+
+body {
+  width: 85%;
+  height: 0 auto;
+  background-color: #177ec7;
+}
+
+h1 {
+  margin-left: 47.5%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-family: "Righteous";
+  font-size: 3.5rem;
+  color: var(--color-letra);
+}
+
+/* BOX MADRE - PROPIEDADES DE GRID */
+
+.containermaster {
+  width: 90%;
+  margin-top: 1%;
+  margin-left: 15%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 500px;
+  gap: 4px;
+  border-radius: 10px;
+  background-color: var(--fondo-conmaster);
+  box-shadow: 0px 0px 25px 10px white;
+}
+
+/* CONTENEDOR 1 - LADO DERECHO - */ /* CONTENEDOR 1 - LADO DERECHO - */ /* CONTENEDOR 1 - LADO DERECHO - */
+
+.container1 {
+  background-color: var(--color-letra);
+  width: 100%;
+  height: 0 auto;
+  border: solid 5px #fffffe;
+  border-radius: 10px 0px 0px 10px;
+  height: 0 auto;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "a1 a1 a1 a1 a1 a1 a1 a1"
+    "a2 a2 a3 a3 a3 a3 a3 a3"
+    "a2 a2 a3 a3 a3 a3 a3 a3"
+    "a2 a2 a3 a3 a3 a3 a3 a3"
+    "a2 a2 a3 a3 a3 a3 a3 a3"
+    "a4 a4 a4 a4 a4 a4 a4 a4";
+}
+
+.container1 .item1 {
+  background-color: var(--color-fondocontainer);
+  text-align: center;
+  font-family: var(--letra-poppins);
+  font-size: 1.3rem;
+  border-radius: 10px 0px 0px 0px;
+  color: var(--color-letra);
+
+  grid-area: a1;
+}
+
+.container1 .item1 p {
+  margin-top: 1%;
+  padding: 2%;
+}
+
+.container1 .item2 {
+  background-image: url(./saque1.jpg);
+  background-position: center;
+  position: relative;
+  color: transparent;
+  background-size: 150% 100%;
+
+  grid-area: a2;
+}
+
+/* CONTAINER ANIDADO */
+
+.container1 .container15 {
+  background-color: var(--color-letra);
+  width: 100%;
+  border: solid 5px #fffffe;
+  border-radius: 10px 0px 0px 10px;
+  height: 0 auto;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "aa1 aa1 "
+    "aa2 aa2";
+  grid-area: a3;
+}
+
+.item151 {
+  background-color: var(--color-fondocontainer);
+  font-family: var(--letra-poppins);
+  font-size: 1.5rem;
+  color: var(--color-letra);
+  text-align: center;
+
+  grid-area: aa1;
+}
+
+.item151 h4 {
+  margin-top: 10%;
+}
+
+.container15 .item151 h4::before {
+  content: "";
+  color: var(--color-letra);
+  margin-top: 13%;
+}
+
+.item152 {
+  text-align: center;
+  font-family: var(--letra-poppins);
+  font-size: 1.5rem;
+  border-radius: 0px 0px 0px 0px;
+  color: var(--color-letra);
+  background-image: url(./pelota.jpeg);
+  background-size: 100% 100%;
+  grid-area: aa2;
+}
+
+.container15 .item152 h5::before {
+  content: "Aprende sobre las reglas del tenis";
+}
+
+.rules {
+  margin-top: 45px;
+}
+
+/* FIN DE CONTAINER ANIDADO */
+
+.container1 .item4 {
+  background-color: var(--color-fondocontainer);
+  font-family: var(--letra-poppins);
+  font-size: 1.5rem;
+  color: var(--color-letra);
+  text-align: center;
+  border-radius: 0px 0px 0px 10px;
+  grid-area: a4;
+}
+
+.reserva {
+  margin-top: 18px;
+}
+
+/* CONTENEDOR 2 - LADO IZQUIERDO - */ /* CONTENEDOR 2 - LADO IZQUIERDO - */ /* CONTENEDOR 2 - LADO IZQUIERDO - */
+
+.container2 {
+  background-color: var(--color-letra);
+  width: 100%;
+  height: 0 auto;
+  border: solid 5px #fffffe;
+  border-radius: 0px 10px 10px 0px;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "b2 b2 b2 b2 b2 b2 b2 b2"
+    "b5 b5 b5 b5 b5 b5 b1 b1"
+    "b5 b5 b5 b5 b5 b5 b1 b1"
+    "b5 b5 b5 b5 b5 b5 b1 b1"
+    "b5 b5 b5 b5 b5 b5 b1 b1"
+    "b3 b3 b3 b3 b3 b3 b3 b3";
+}
+
+.container2 .item21 {
+  background-image: url(./8699189512_88fc8c9c60_b.jpg);
+  position: relative;
+  color: transparent;
+  background-size: 100% 120%;
+  grid-area: b1;
+}
+
+.container2 .item22 {
+  background-color: var(--color-fondocontainer);
+  font-family: var(--letra-poppins);
+  color: var(--color-letra);
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 0px 10px 0px 0px;
+  grid-area: b2;
+}
+
+.container2 .item22 h5 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.container2 .container25 {
+  background-color: var(--color-letra);
+  width: 100%;
+  border: solid 5px #fffffe;
+  border-radius: 10px 0px 0px 10px;
+  height: 0 auto;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "bb1 bb1 "
+    "bb2 bb2";
+  grid-area: b5;
+}
+
+/* TABLA DE RESULTADOS*/
+
+.container25 .item251 {
+  background-color: var(--color-fondocontainer);
+  color: var(--color-letra);
+  font-family: var(--letra-poppins);
+
+  grid-area: bb1;
+}
+
+.item251 p {
+  margin-top: 5%;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.container25 .item251 p::before {
+  content: "Resultados del utimo partido:";
+}
+
+thead {
+  background-color: var(--color-fondo);
+  color: var(--color-letra);
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  position: relative;
+  table-layout: fixed;
+  width: 350px;
+  height: auto;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: auto;
+}
+
+tbody {
+  background-color: white;
+  color: var(--color-fondo);
+}
+
+/* FIN DE TABLA DE RESULTADO*/
+
+.container2 .item23 {
+  background-image: url(./tenis-kortlari-3705.webp);
+  background-size: 100% 100%;
+  font-family: var(--letra-poppins);
+  color: var(--color-letra);
+  font-size: 1.2rem;
+  text-align: center;
+
+  border-radius: 0px 0px 10px 0px;
+  grid-area: b3;
+}
+
+.container25 .item252 {
+  background-color: var(--color-fondocontainer);
+  background-image: url();
+  background-size: 100% 100%;
+  font-family: var(--letra-poppins);
+  color: var(--color-letra);
+  font-size: 1rem;
+  padding: 20px;
+  text-align: center;
+  grid-area: bb2;
+}
+
+.container25 .item252 .estamos::before {
+  content: " Entrada de blog: ¿Como calentar antes de un entramiento tenis?.. ";
+  font-weight: bold;
+}
+
+.container25 .item252 a {
+  color: #177ec7;
+}
+
+/* TRANSICIONES O EFECTOS DE LOS CUADROS*/
+
+/* CUADRO HORARIO*/
+
+.item22:hover {
+  box-shadow: 2px -17px 44px 27px var(--color-fondo) inset;
+}
+
+.item22:active {
+  filter: brightness(1.5);
+  cursor: pointer;
+}
+
+/* FIN CUADRO HORARIO*/
+
+/*CUADRO IMAGEN CLASES PRIVADAS*/
+
+.item21:hover p {
+  margin-top: 90%;
+  margin-bottom: 0 auto;
+  color: var(--color-letra);
+  text-align: center;
+  font-family: var(--letra-poppins);
+  font-size: 1.5rem;
+}
+
+.item21:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+/* FIN DE CUADRO CLASES PRIVADAS*/
+
+/* IMAGEN DE JOKOVIC EN CUADRO */
+
+.item252:hover {
+  animation-duration: 3s;
+  animation-name: jokovic;
+}
+
+@keyframes jokovic {
+  0% {
+    background-color: grey;
+  }
+
+  100% {
+    background-image: url(./Djokovic-saque-2016-Australia-efe-Semifinal.jpg);
+    background-size: 100% 100%;
+  }
+}
+
+/* FIN DE IMAGEN DE JOKOVIC EN CUADRO */
+
+.item23:hover {
+  filter: brightness(1.5);
+}
+
+tr:hover {
+  background-color: #24328d;
+  color: #fffffe;
+  font-weight: bold;
+}
+
+/* ANIMACION CUADRO PRODUCTOS */
+
+.item151:hover {
+  animation-name: productos;
+  animation: productos 1s ease 0s 1 normal none;
+}
+
+@keyframes productos {
+  0% {
+    background-image: url(./depositphotos_125989776-stock-illustration-ball-tennis-sport-equipment-icon.webp);
+    transform: scale(0.2);
+    background-size: 100% 100%;
+  }
+
+  100% {
+    background-image: url(./depositphotos_125989776-stock-illustration-ball-tennis-sport-equipment-icon.webp);
+    background-size: 100% 100%;
+    transform: scale(1);
+    color: black;
+  }
+}
+
+/* FIN ANIMACION CUADRO PRODUCTOS */
+
+/* CUADRO CLASES GRUPALES */
+
+.item2:hover p {
+  margin-top: 90%;
+  margin-bottom: 0 auto;
+  color: var(--color-letra);
+  text-align: center;
+  font-family: var(--letra-poppins);
+  font-size: 1.5rem;
+}
+
+.item2:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+/* FIN CUADRO CLASES GRUPALES */
+
+/* APRENDE SOBRE LAS REGLAS DE TENIS EFECTO OSCURO */
+
+.item152:hover {
+  animation-duration: 2s;
+  animation-name: reglas;
+}
+@keyframes reglas {
+  0% {
+  }
+
+  100% {
+    filter: brightness(45%);
+    color: var(--color-letra);
+  }
+}
+
+/* FIN APRENDE SOBRE LAS REGLAS DE TENOS EFECTO OSCURO */
+
+.item4:hover {
+  box-shadow: 2px 17px 54px 27px var(--color-fondo) inset;
+}
+
+.item4:active {
+  filter: brightness(1.5);
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-family: var(--letra-poppins);
+    font-size: 3rem;
+    margin-left: 30%;
+  }
+
+  h1:hover {
+    color: var(--color-fondocontainer);
+    text-shadow: -4px 0px 5px rgb(236, 237, 241);
+  }
+
+  .containermaster {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .container1 {
+    order: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    width: 100%;
+    height: 800px;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .container1 .item1 {
+    display: block;
+    order: 1;
+    width: 35%;
+    height: 400px;
+    background-image: url(./la-pelota-de-tenis-está-en-la-vertical-del-margen-de-beneficio-40803477.jpg);
+    background-size: 100% 100%;
+    border-radius: 0px 10px 0px 0px;
+  }
+
+  .item1 p {
+    display: none;
+  }
+
+  .item1:hover {
+    filter: brightness(1.2);
+  }
+
+  .item2 {
+    border-radius: 10px 0px 0px 0px;
+  }
+
+  .item2 p {
+    display: none;
+  }
+
+  .item2:hover {
+    filter: brightness(1.3);
+  }
+
+  .container15 .item151 h4::before {
+    content: "Bienvenidos a tu Club de Tenis";
+    color: var(--color-letra);
+    font-size: 1.8rem;
+  }
+
+  .container15 .item151 h4 {
+    margin-top: 15%;
+  }
+
+  .container15 .item151 h3 {
+    display: none;
+  }
+
+  .item151:hover {
+    filter: brightness(1.5);
+    animation: none;
+  }
+
+  .container15 .item152 {
+    background-color: var(--color-fondocontainer);
+    background-image: none;
+    border-radius: 0px;
+  }
+
+  .item152:hover {
+    filter: brightness(1.5);
+    animation: none;
+  }
+
+  .container15 .item152 h5::before {
+    content: "Horario: L-V 9am-8pm, S-D:9am-10pm";
+  }
+
+  .container1 .item2 {
+    width: 35%;
+  }
+
+  .container1 .item4 {
+    display: none;
+  }
+
+  .container2 {
+    order: 1;
+    width: auto;
+    height: auto;
+    display: flex;
+    width: 100%;
+    height: 800px;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  .item21 {
+    border-radius: 0px 0px 0px 10px;
+  }
+
+  .item21 p {
+    display: none;
+  }
+
+  .item251 p {
+    margin-top: 45px;
+    text-align: center;
+  }
+
+  .container2 .item251 p::before {
+    content: "Agenda aqui tus clases grupales y privadas";
+    font-size: 1.5rem;
+    margin-top: 15%;
+  }
+
+  .item251:hover {
+    filter: brightness(1.5);
+  }
+
+  table {
+    display: none;
+  }
+
+  .container2 .item21 {
+    width: 35%;
+    height: 400px;
+  }
+
+  .container2 .item22 {
+    display: none;
+  }
+
+  .container2 .item23 {
+    width: 35%;
+    height: 400px;
+    order: 0;
+  }
+
+  .item23 p {
+    display: none;
+  }
+
+  .container25 .item252 {
+    border-radius: 0px;
+  }
+
+  .container2 .item252 p {
+    margin-top: 15%;
+  }
+
+  .container2 .item252 .estamos::before {
+    content: "Estamos ubicados en la calle Monserrat, 08970. Barcelona";
+  }
+
+  .item252:hover {
+    animation: none;
+    filter: brightness(1.5);
+  }
+
+  .container2 .item252 a {
+    display: none;
+  }
+}
